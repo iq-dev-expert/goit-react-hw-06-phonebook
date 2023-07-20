@@ -1,11 +1,12 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { addContact } from 'redux/contactsSlice';
+import { getContacts } from 'redux/selectors';
 import { nanoid } from 'nanoid';
 import { Form } from './ContactForm.styled';
 import { Button } from '../../utils-style/Template.styled';
 
 export const ContactForm = () => {
-  const contacts = useSelector(state => state.contacts);
+  const contacts = useSelector(getContacts);
   const dispatch = useDispatch();
 
   const onSubmit = e => {
