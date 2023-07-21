@@ -2,8 +2,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addContact } from 'redux/contactsSlice';
 import { getContacts } from 'redux/selectors';
 import { nanoid } from 'nanoid';
-import { Form } from './ContactForm.styled';
-import { Button } from '../../utils-style/Template.styled';
+import { Form } from 'components/ContactForm/ContactForm.styled';
+import { Button } from 'utils-style/Template.styled';
 
 export const ContactForm = () => {
   const contacts = useSelector(getContacts);

@@ -1,8 +1,8 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteContact } from 'redux/contactsSlice';
 import { getContacts, getFilterValue } from 'redux/selectors';
-import { List } from './ContactList.styled';
-import { Button } from '../../utils-style/Template.styled';
+import { List } from 'components/ContactList/ContactList.styled';
+import { Button } from 'utils-style/Template.styled';
 
 export const ContactList = () => {
   const contacts = useSelector(getContacts);
