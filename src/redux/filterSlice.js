@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { deleteContact } from './contactsSlice';
 
 const initialState = '';
 
@@ -9,6 +10,9 @@ export const filterSlice = createSlice({
     filterContacts: (state, action) => {
       return (state = action.payload);
     },
+  },
+  extraReducers: builder => {
+    builder.addCase(deleteContact, () => initialState);
   },
 });
 
